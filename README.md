@@ -70,7 +70,7 @@ class JvmBuilder_Test {
 }
 ```
 
-This provides a `Builder` class that can be used in Java to create your Kotlin `Test` `data class` using the default values and following a [`Builder Pattern`](https://en.wikipedia.org/wiki/Builder_pattern)
+This provides a `Builder` class that can be used in Java to create your Kotlin `Test` `data class` using the default values and following a [`Builder Pattern`](https://en.wikipedia.org/wiki/Builder_pattern).
 
 The following Java code generates a `Test` instance with `foo = 1` (taking the 1 from the default `Kotlin` constructor) and `bar = "bar"`.
 ```
