@@ -18,7 +18,7 @@ data class TestDataClass1(val counter: Int = 1, val name: List<String?>) {
 }
 
 @JvmBuilder
-@Suppress("AddVarianceModifier")
+@Suppress("with")
 data class TestDataClass2<out T, R>(val generic1: T, val generic2: R)
 
 @JvmBuilder
@@ -27,7 +27,7 @@ data class TestDataClass3<out T : Any, R>(val foo: Foo<T, R>, val bar: Bar?)
 @JvmBuilder
 data class TestDataClass4<Z, out T : TestDataClass2<Z, Z>, R>(val a: TestDataClass2<T, R>, val b: TestDataClass2<Z, *>)
 
-@JvmBuilder(prefix = "copyIfNecessary")
+@JvmBuilder(prefix = "set")
 data class TestDataClass5<out T, R>(val foo: Foo<T, R>, val list: IntArrayList?, val mList: MutableList<Any?>?)
 
 @JvmBuilder
