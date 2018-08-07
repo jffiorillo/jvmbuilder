@@ -3,36 +3,6 @@ A source code generator for [Kotlin](https://kotlinlang.org/) code used for [Jav
 
 # How to use JvmBuilder
 
-## Gradle
-
-Gradle users should add the dependencies in their `build.gradle` file:
-
-```
-dependencies {
-  implementation "io.github.jffiorillo:builder-annotations:<latest_version>"
-  kapt "io.github.jffiorillo:builder:<latest_version>"
-}
-```
-
-## Maven
-
-Maven users should add the dependencies in their `pom.xml` file:
-
-```
-<dependency>
-  <groupId>io.github.jffiorillo</groupId>
-  <artifactId>builder-annotations</artifactId>
-  <version>{latest_version}</version>
-</dependency>
-<dependency>
-  <groupId>io.github.jffiorillo</groupId>
-  <artifactId>builder</artifactId>
-  <version>{latest_version}</version>
-  <scope>provided</scope>
-</dependency>
-```
-## Usage
-
 When annotating a Kotlin `data class` with `@JvmBuilder` 
 ``` 
 @JvmBuilder
@@ -75,4 +45,33 @@ This provides a `Builder` class that can be used in Java to create your Kotlin `
 The following Java code generates a `Test` instance with `foo = 1` (taking the 1 from the default `Kotlin` constructor) and `bar = "bar"`.
 ```
 new Jvm_Builder().bar("bar").build()
+```
+
+## Gradle
+
+Gradle users should add the dependencies in their `build.gradle` file:
+
+```
+dependencies {
+  implementation "io.github.jffiorillo:builder-annotations:<latest_version>"
+  kapt "io.github.jffiorillo:builder:<latest_version>"
+}
+```
+
+## Maven
+
+Maven users should add the dependencies in their `pom.xml` file:
+
+```
+<dependency>
+  <groupId>io.github.jffiorillo</groupId>
+  <artifactId>builder-annotations</artifactId>
+  <version>{latest_version}</version>
+</dependency>
+<dependency>
+  <groupId>io.github.jffiorillo</groupId>
+  <artifactId>builder</artifactId>
+  <version>{latest_version}</version>
+  <scope>provided</scope>
+</dependency>
 ```
