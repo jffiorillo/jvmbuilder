@@ -1,5 +1,5 @@
 # JvmBuilder
-A source code generator for [Kotlin](https://kotlinlang.org/) code used for [Java](https://en.wikipedia.org/wiki/Java_(programming_language)).
+A source code generator for [Kotlin](https://kotlinlang.org/) data classes to automatically create a Builder class. 
 
 # How to use JvmBuilder
 
@@ -75,3 +75,11 @@ Maven users should add the dependencies in their `pom.xml` file:
   <scope>provided</scope>
 </dependency>
 ```
+
+
+## Benefit 
+
+  * In order to have a good Kotlin interoperability with [Java](https://en.wikipedia.org/wiki/Java_(programming_language)), you can use 
+  this tool to generate automatically generate Builders for your data classes that are accessible from Java consumers.
+  * The time of executing the annotation processor is really slow because uses the [kotlin-metadata](https://github.com/Takhion/kotlin-metadata) instead of reflection.
+   
