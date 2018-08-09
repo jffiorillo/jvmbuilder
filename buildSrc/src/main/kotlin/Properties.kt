@@ -2,7 +2,7 @@
 
 import org.gradle.api.Project
 
-val codeVersion = "0.0.1"
+val codeVersion = "0.0.2"
 
 val gitHubUser = "jffiorillo"
 val gitHubRepo = "jvmbuilder"
