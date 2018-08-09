@@ -1,3 +1,6 @@
-plugins { kotlin("jvm") }
+plugins {
+  kotlin("jvm")
+}
 
-dependencies { compile(kotlin("runtime")) }
+
+val upload = configurePublications(Projects.annotations)
