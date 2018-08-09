@@ -18,4 +18,4 @@ package io.github.jffiorillo.builder
 import kotlin.annotation.AnnotationTarget.CLASS
 
 @Target(CLASS)
-annotation class JvmBuilder(val prefix: String = "")
+annotation class JvmBuilder(val prefix: String = "", val debug: Boolean = false)
