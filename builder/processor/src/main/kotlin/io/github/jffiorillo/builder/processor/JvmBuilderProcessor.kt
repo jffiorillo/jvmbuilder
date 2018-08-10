@@ -81,8 +81,8 @@ class JvmBuilderProcessor : KotlinAbstractProcessor(), KotlinMetadataUtils {
 
 
       val fileName = "$builderClassName.kt"
-      val file = File(generatedDir, fileName)
-      printMessageIfDebug("fileName = $fileName, file = $file")
+      val path = File(generatedDir, "").toPath()
+      printMessageIfDebug("package = $`package`, fileName = $fileName, path = $path")
 
       val builderFun = generateBuildFunction(classProto, generateBuildFunctionReturnsClass(typeArguments, element), element)
 
@@ -96,7 +96,7 @@ class JvmBuilderProcessor : KotlinAbstractProcessor(), KotlinMetadataUtils {
               .build()
           )
           .build()
-          .writeTo(file)
+          .writeTo(path)
     }
   }
 
@@ -212,7 +212,7 @@ class JvmBuilderProcessor : KotlinAbstractProcessor(), KotlinMetadataUtils {
 
     fun printMessageIfDebug(message: String) {
       if (jvmBuilder.debug) {
-        messager.printMessage(NOTE, "JvmBuilder: $message", element)
+        messager.printMessage(NOTE, "JvmBuilder: $message")
       }
     }
 
