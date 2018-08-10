@@ -80,11 +80,9 @@ class JvmBuilderProcessor : KotlinAbstractProcessor(), KotlinMetadataUtils {
       val parameters = generatePropertyAndBuilderFunPerProperty(jvmBuilderPrefix, functionsReturnClass)
 
 
-      val dirPath = `package`.replace('.', File.separatorChar)
-      val filePath = "$builderClassName.kt"
-      val dir = File(generatedDir, dirPath).also { it.mkdirs() }
-      val file = File(dir, filePath)
-      printMessageIfDebug("dirPath = $dirPath, filePath = $filePath, file = $file")
+      val fileName = "$builderClassName.kt"
+      val file = File(generatedDir, fileName)
+      printMessageIfDebug("fileName = $fileName, file = $file")
 
       val builderFun = generateBuildFunction(classProto, generateBuildFunctionReturnsClass(typeArguments, element), element)
 
