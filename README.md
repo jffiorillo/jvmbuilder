@@ -1,4 +1,6 @@
 # JvmBuilder
+[ ![Download](https://api.bintray.com/packages/jffiorillo/jvmbuilder/jvmbuilder/images/download.svg) ](https://bintray.com/jffiorillo/jvmbuilder/jvmbuilder/_latestVersion)
+
 A source code generator for [Kotlin](https://kotlinlang.org/) data classes to automatically create a Builder class. 
 
 # How to use JvmBuilder
