@@ -55,8 +55,8 @@ Gradle users should add the dependencies in their `build.gradle` file:
 
 ```
 dependencies {
-  implementation "io.github.jffiorillo:builder-annotations:<latest_version>"
-  kapt "io.github.jffiorillo:builder:<latest_version>"
+  implementation "io.github.jffiorillo:jvmbuilder-annotations:<latest_version>"
+  kapt "io.github.jffiorillo:jvmbuilder:<latest_version>"
 }
 ```
 
@@ -67,12 +67,12 @@ Maven users should add the dependencies in their `pom.xml` file:
 ```
 <dependency>
   <groupId>io.github.jffiorillo</groupId>
-  <artifactId>builder-annotations</artifactId>
+  <artifactId>jvmbuilder-annotations</artifactId>
   <version>{latest_version}</version>
 </dependency>
 <dependency>
   <groupId>io.github.jffiorillo</groupId>
-  <artifactId>builder</artifactId>
+  <artifactId>jvmbuilder</artifactId>
   <version>{latest_version}</version>
   <scope>provided</scope>
 </dependency>
